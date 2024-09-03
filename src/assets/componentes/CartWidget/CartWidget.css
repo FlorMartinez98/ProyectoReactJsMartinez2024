@@ -1,3 +1,5 @@
-.imagenCarrito {
-    width: 100px;
-}
+.cart-widget {
+    color: #b56576;
+    cursor: pointer;
+    padding: 10px; 
+  }
