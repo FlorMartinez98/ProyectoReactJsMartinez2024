@@ -1,47 +1,88 @@
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: #ffe4e1;
-    border-bottom: 2px solid #f7cac9; 
+    justify-content: space-between;
+    padding: 0 30px;
+    background-color: #ffffff; 
+    border-bottom: 2px solid #b56576; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #b56576;
-    margin: 0;
-    font-family: 'Playfair Display', serif;
+.logoCdf {
+    max-height: 85px;
+    width: auto; 
+    object-fit: contain;
+    margin: 10px 0;
 }
 
 nav {
-    display: flex;
+    flex-grow: 1;
+    margin-left: 30px;
 }
 
 nav ul {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
     margin: 0 20px;
-    list-style-type: none;
-    font-size: 1.2rem;
-    font-family: 'Poppins', sans-serif;
-    color: #d8a7b1; 
-    cursor: pointer;
-    transition: color 0.3s ease;
 }
 
-nav ul:hover {
-    color: #b56576;
-}
-
-.cart-widget {
+nav ul li a {
+    text-decoration: none;
+    color: #333; 
+    font-size: 18px; 
+    font-weight: 600; 
+    transition: color 0.3s, border-bottom 0.3s;
     position: relative;
-    font-size: 1.7rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
     color: #b56576; 
-    cursor: pointer;
-    transition: transform 0.3s ease;
 }
 
-.cart-widget:hover {
-    transform: scale(1.1);
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #b56576; 
+    transform: scaleX(0);
+    transition: transform 0.3s;
 }
 
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; 
+    }
+
+    nav {
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .logoCdf {
+        max-height: 40px; 
+    }
+}
