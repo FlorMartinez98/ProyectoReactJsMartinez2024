@@ -1,47 +1,83 @@
 .cart-widget {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff; 
-  color: #b56576; 
-  border: 2px solid #b56576; 
-  border-radius: 50%; 
-  width: 60px; 
-  height: 60px; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  position: relative; 
+  background-color: #fdf0f1; 
+  border-radius: 50px; 
+  padding: 12px;
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+  overflow: visible; 
 }
 
 .cart-widget:hover {
   background-color: #b56576; 
-  color: #ffffff; 
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
-  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-3px) scale(1.1); 
 }
 
-.cart-widget strong {
-  margin-left: 8px;
-  font-size: 18px; 
-  font-weight: 700;
+.cart-widget a {
+  text-decoration: none;
+  color: inherit; 
 }
 
 .cart-widget .fa-shopping-cart {
-  font-size: 24px; 
+  font-size: 26px; 
+  color: #b56576; 
+  transition: color 0.3s ease; 
+}
+
+.cart-widget:hover .fa-shopping-cart {
+  color: #fff; 
+}
+
+.cart-widget strong {
+  position: absolute;
+  top: -8px; 
+  right: -8px; 
+  background-color: #ff6f61; 
+  color: white;
+  font-size: 14px;
+  padding: 5px 9px;
+  border-radius: 50%;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); 
+  min-width: 22px; 
+  height: 22px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bounce 0.5s ease infinite alternate;
 }
 
 @media (max-width: 768px) {
   .cart-widget {
-      width: 50px; 
-      height: 50px; 
-  }
-
-  .cart-widget strong {
-      font-size: 16px;
+    padding: 8px;
+    width: 50px;
+    height: 50px;
   }
 
   .cart-widget .fa-shopping-cart {
-      font-size: 20px; 
+    font-size: 22px;
+  }
+
+  .cart-widget strong {
+    font-size: 12px;
+    padding: 4px 7px;
+    min-width: 18px;
+    height: 18px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-3px);
   }
 }
