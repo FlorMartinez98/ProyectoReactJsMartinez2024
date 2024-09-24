@@ -7,6 +7,8 @@ import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailCon
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { CarritoProvider } from './context/CarritoContext'
 import Cart from './componentes/Cart/Cart'
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const App = () => {
@@ -25,7 +27,8 @@ const App = () => {
                   <img src="/public/imagenes/construccion.jpg" alt="En construcción"/>
                 </div>}/>
             </Routes>
-          </CarritoProvider>
+        </CarritoProvider>
+        <ToastContainer />
       </BrowserRouter>
     </>
   )

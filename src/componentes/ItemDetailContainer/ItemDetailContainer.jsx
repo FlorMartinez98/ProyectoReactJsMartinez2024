@@ -15,7 +15,6 @@ const ItemDetailContainer = () => {
     }, [idItem])
 
 
-
   return (
     <div>
         <ItemDetail {...producto}/>
