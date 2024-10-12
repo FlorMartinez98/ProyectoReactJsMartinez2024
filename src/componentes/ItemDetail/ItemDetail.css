@@ -52,6 +52,25 @@
     max-width: 500px; 
 }
 
+
+.btn {
+    background-color: #b56576; 
+    color: #ffffff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    transition: background-color 0.3s, transform 0.3s; 
+    cursor: pointer; 
+    margin: 10px; 
+}
+
+.btn:hover {
+    background-color: #a05260;
+    transform: scale(1.05); 
+    color: #ffffff; 
+}
+
 @media screen and (max-width: 768px) {
     .contenedorItem {
         max-width: 90%; 

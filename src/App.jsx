@@ -10,6 +10,7 @@ import Cart from './componentes/Cart/Cart'
 import { ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Checkout from "./componentes/Checkout/Checkout"
+import Footer from './componentes/Footer/Footer'
 
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
             </Routes>
         </CarritoProvider>
         <ToastContainer />
+        <Footer />
       </BrowserRouter>
     </>
   )
