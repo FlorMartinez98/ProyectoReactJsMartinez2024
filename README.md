@@ -5,6 +5,8 @@
 
 * [GitHub](https://github.com/FlorMartinez98/ProyectoReactJsMartinez2024)
 
+* [Deploy] (https://proyecto-react-js-martinez2024-ow2f.vercel.app/)
+
 ---
 
 > Curso: React JS - CoderHouse - Comisión 60035
@@ -106,7 +108,6 @@
 
 ---
 
----
 > Correr web / Instalación
 
 1. Clona el repositorio en tu maquina local.
