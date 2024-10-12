@@ -12,7 +12,7 @@ const {carrito, total, cantidadTotal, vaciarCarrito} = useContext(CarritoContext
     if (cantidadTotal === 0) {
     return (
             <>
-                <h2>No hay productos en el carrito ¿deseas agregar algo?</h2>
+                <h2 className="empty-cart-message">No hay productos en el carrito ¿deseas agregar algo?</h2>
                 <div className="link-container">
                     <Link className="link-ver-productos" to="/">Ver Productos</Link>
                 </div>
@@ -23,7 +23,7 @@ const {carrito, total, cantidadTotal, vaciarCarrito} = useContext(CarritoContext
 return (
     <div className="cart">
         {
-            carrito.map(producto => <CartItem key={producto.id} {...producto}/>)
+            carrito.map(producto => <CartItem key={producto.item.id} {...producto}/>)
         }
         <h3>Total: ${total}</h3>
         <h3>Cantidad Total: {cantidadTotal}</h3>
